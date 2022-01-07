@@ -1,0 +1,119 @@
+@use './base/reset';
+@use './utilities/variables';
+
+.container{
+    color: variables.$dark-gray;
+    padding: 1.25rem 1rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    @media (min-width: 1250px) {
+        padding:  1.25rem 4.813rem;
+    } 
+
+    & .header{
+        & h1{
+            margin: 0;
+            font-family: 'Inconsolata';
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.08em;
+        }
+    }
+
+    & .body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 4rem 0 0 0;
+        
+        @media (min-width: 1250px) {
+            flex-direction: row;
+            margin-top: auto;
+        }    
+
+        & img{
+            margin-left: 1.25rem;
+            width: 85.5%;
+            max-width: 33.70rem;
+
+            @media (min-width: 1250px) {
+                margin: 0;
+            } 
+        }
+
+        &__text{
+            margin: 3.75rem 0 0 0;
+
+            @media (min-width: 1250px) {
+                margin: 0 0 0 7.375rem;
+            } 
+
+            & h2{
+                margin: 0;
+                font-weight: 700;
+                font-size: 3rem;
+                letter-spacing: -0.035em;
+                max-width: 36.625rem;
+
+                @media (min-width: 1250px) {
+                    font-size: 4rem;
+                }
+            }
+
+            & p{
+                margin: 1.875rem 0 4.125rem 0;
+                color: variables.$light-gray;
+                font-size: 1.125rem;
+                line-height: 1.688rem;
+                letter-spacing: -0.035em;
+                max-width: 23.813rem;
+
+                @media (min-width: 1250px) {
+                    font-size: 1.5rem;
+                    line-height: 2.25rem;
+                    margin: 2.25rem 0 4rem 0;
+                }
+                
+            }
+
+            &--button{
+                background: variables.$dark-gray;
+                width: 13.5rem;
+                height: 4.25rem;
+                padding: 1.5rem 2.688rem;
+
+                & a{
+                    color: variables.$white;
+                    text-decoration: none;
+                    font-size: 0.875rem;
+                    letter-spacing: -0.035em;
+                }
+            }
+        }
+    }
+
+    & .footer{
+        margin-top: 7.125rem;
+        text-align: center;
+
+        & span{
+            color: variables.$gray;
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 0.875rem;
+
+            & a{
+                color: variables.$gray;
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+
+        @media (min-width: 1250px) {
+            margin-top: auto;
+        }
+    }
+}
